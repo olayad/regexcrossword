@@ -89,3 +89,21 @@ Hint:
 - In the pattern `.*M?O.*`, an `O` <b>must</b> be present for a match to happen.
 
 - `\1` makes back reference to match same text of the first group again.
+
+#### (3) ghost
+
+|                 | [COBRA]+ | (AB&#124;O&#124;OR)+ |
+|:---------------:|:--------:|:--------------------:|
+| <b>(.)+\1</b>   | O        | O                    |
+| <b>[^ABRC]+</b> | O        | O                    |
+
+#### (4) symbolism
+
+|             | .?.+ | .+  |
+|:-----------:|:----:|:---:|
+| <b>[*]+</b> | *    | *   |
+| <b>/+</b>   | /    | /   |
+
+Hint:
+
+- `[*]` Matches the `*` character literally.
