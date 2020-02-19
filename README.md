@@ -1,4 +1,4 @@
-# Solutions for regexcrossword.com
+The following are solutions from the REGEX tutorial [regexcrosswords](https://regexcrossword.com/).
 
 ### Tutorial
 
@@ -22,10 +22,10 @@
 
 #### (4) zero or more
 
-|            | A* |
-|:----------:|:--:|
-| <b>A</b>   | A  |
-| <b>AB+</b> | A  |
+|            | A*  |
+|:----------:|:---:|
+| <b>A</b>   | A   |
+| <b>AB+</b> | A   |
 
 #### (5) zero or one
 
@@ -36,10 +36,10 @@
 
 #### (6) one or more
 
-|                 | A+ |
-|:---------------:|:--:|
-| <b>A&#124;B</b> | A  |
-| <b>A&#124;Z</b> | A  |
+|                 | A+  |
+|:---------------:|:---:|
+| <b>A&#124;B</b> | A   |
+| <b>A&#124;Z</b> | A   |
 
 #### (7) backreference
 
@@ -61,15 +61,31 @@
 |:---------:|:---------:|
 | <b>\s</b> | \s        |
 
-Hint: Must use normal " " character.
+Hint: 
+- Must use normal " " character instead of `\s`.
 
 ### Beginner
 
 #### (1) beatles
 
-|                           | [^SPEAK]+ | EP&#124;IP&#124;EF&#124 |
+|                           | [^SPEAK]+ | EP&#124;IP&#124;EF |
 |:-------------------------:|:---------:|:------------------:|
 | <b>HE&#124;LL&#124;O+</b> | H         | E                  |
 | <b>[PLEASE]+</b>          | L         | P                  |
 
-Hint: [^] means character <b>NOT</b> present in list.
+Hint: 
+- `[^SPEAK]` means any character <b>NOT</b> present in list.
+
+
+#### (2) naughty
+
+|                             | (A&#124;B&#124;C)\1 | (AB&#124;OE&#124;SK) |
+|:---------------------------:|:-------------------:|:--------------------:|
+| <b>.&#42;M?O.&#42;</b>      | B                   | O                    |
+| <b>(AN&#124;FE&#124;BE)</b> | B                   | E                    |
+
+Hint: 
+
+- In the pattern `.*M?O.*`, an `O` <b>must</b> be present for a match to happen.
+
+- `\1` makes back reference to match same text of the first group again.
