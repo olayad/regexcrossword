@@ -13,6 +13,7 @@ Hint:
 #### (2) naughty
 
 ![](./static/beg-naughty.png)
+
 Hint: 
 
 - In the pattern `.*M?O.*`, an `O` <b>must</b> be present for a match to happen.
@@ -26,6 +27,7 @@ Hint:
 #### (4) symbolism
 
 ![](./static/beg-symbolism.png)
+
 Hint:
 
 - `[*]` Matches the `*` character literally.
